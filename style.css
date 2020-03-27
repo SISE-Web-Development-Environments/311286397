@@ -8,7 +8,7 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 17px;
 	text-align: center;
-	background-color: whitesmoke;
+	background-color: lightslategray;
 	border-left: 5cm;
 	border-right: 5cm;
 	border-width: 15cm;
@@ -29,6 +29,7 @@ ul{
 	padding: 0;
 	overflow: hidden;
 	background-color: #333;
+	z-index: 2;
 }
 li{
 	float: left;
@@ -51,4 +52,18 @@ li a:hover:not(.active){
 
 section#photos .gallery:hover{
 	transform: scale(2,2)
+}
+.btn{
+	color: snow;
+	background-color: rgb(15, 58, 199);
+	height: 1.3cm;
+	width: 2.6cm;
+	font-size: 20px;
+	
+}
+
+#MyStyle{
+	background-color: lightslategray;
+	text-align: center;
+	
 }
