@@ -8,16 +8,15 @@
 
   <body>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/En_IL/sdk.js#xfbml=1&version=v6.0"></script>
-    <div id="fb-root"></div>
-      <div  class="menu">
-        <ul>
-          <li><a class="active" href="#about" style="padding-right: 2cm;"> About Me</a></li> 
-          <li><a href="#photos" style="padding-right: 2cm;">My Photos</a></li>
-          <li><a href="#playlist" style="padding-right: 2cm;">My Playlist</a></li>
-          <li><a href="#like" style="padding-right: 2cm;">Like</a></li>
-          <li><a href="#qrcoder" style="padding-right: 2cm;">QR code</a></li>
-          <li><a href="#spa" style="padding-right: 2cm;">Q&A</a></li>
-          <li><a href="#contact" style="padding-right: 2cm;">Contact Me</a></li>
+      
+        <ul class="myMenu" >
+          <li id="innerMenu"><a class="active" href="#about" style="padding-right: 2cm;"> About Me</a></li> 
+          <li id="innerMenu"><a href="#photos" style="padding-right: 2cm;">My Photos</a></li>
+          <li id="innerMenu"><a href="#playlist" style="padding-right: 2cm;">My Playlist</a></li>
+          <li id="innerMenu"><a href="#like" style="padding-right: 2cm;">Like</a></li>
+          <li id="innerMenu"><a href="#qrcoder" style="padding-right: 2cm;">QR code</a></li>
+          <li id="innerMenu"><a href="#spa" style="padding-right: 2cm;">Q&A</a></li>
+          <li id="innerMenu"><a href="#contact" style="padding-right: 2cm;">Contact Me</a></li>
         </ul>
       </div>
 		  
@@ -74,18 +73,56 @@
         </section>
 
         <section id="spa" class="section">
-          <h1><u>ans</u></h1>
+          <h1><u>Q&A</u></h1>
+            <ol>
+              <li>
+                <b><u>Defference between Web1,Web2,Web3 :</u></b>
+
+                <ul id="answer">
+                  <br>
+                  <li>
+                    Web 1 used for read-only, this type of Web is just a network information source that has enabled the exchange of other information sources such as encyclopedias/books.  
+                  </li>
+                  <br>
+                  <li>
+                    In contrast to Web 1, Web 2 also enables writing as well as reading and thus enables social networks that include information sharing.
+                  </li>
+                  <br>
+                  <li>
+                    Web 3 is much more advanced and can compare pages while searching and adjust the desired result by user type. Of course also allows reading and writing.
+                  </li>
+                </ul>
+              </li>
+              <br>
+              <br>
+              <li>
+                <b><u> Explanations by example:</u></b>
+                <ul>
+                  <br>
+                  <li>
+                      In Web 1 the search is performed by the search engine displaying sites containing common search words.
+                  </li>
+                  <br>
+                  <li>
+                      In Web 3 the search engine will offer the user an autocomplete and the results displayed will be the best match for the user type according to their browsing history and search.
+               </li>
+                  <br>
+                </ul>
+              </li>
+              <br>
+              <br>
+            </ol>
         </section>
 
         <section id="contact" class="section">
           <h1><u>contact me</u></h1>
-          <form name="mailto" action="mailto:kolbasov@post.bgu.ac.il" method="get" enctype="text/plain" autocomplete="on">
+          <form  name="mailto" action="mailto:kolbasov@post.bgu.ac.il" method="get" enctype="text/plain" autocomplete="on">
             <br>
             <br>
             <!-- <textarea  id="email" name="body" class="form-control" placeholder="Write something.." rows="10" cols="50" required=""></textarea> -->
             <label for="email">E-mail:</label>
             <br>
-            <input type="email" id="Email" placeholder="Enter your E-Mail.." size="35" required name="email"><br>
+            <input  type="email" id="Email" placeholder="Enter your E-Mail.." size="35" required name="email"><br>
             Subject:
             <br>
             <input type="subject" placeholder="Enter subject.." size="35" id="subject" name="subject">
@@ -94,27 +131,30 @@
             <br>
             <textarea  id="Text" name="body" class="form-control" placeholder="Write something.." rows="10" cols="45" required=""></textarea><br><br>
             <br>
-            Choose smiley you want to add:
+            Choose smiley you want add to the end of the text:
             <br>
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128523')" name="imog" value="&#128523">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128521')" name="imog" value="&#128521">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128522')" name="imog" value="&#128522">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128519')" name="imog" value="&#128519">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128518')" name="imog" value="&#128518">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128517')" name="imog" value="&#128517">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128516')" name="imog" value="&#128516">
+            <div class="custom-select">
+            <select style="background: transparent; size: 14px 16px;" name="smiley" id="smiley">
+              <option value="&#128521">&#128521</option>
+              <option value="&#128522">&#128522</option>
+              <option value="&#128523">&#128523</option>
+              <option value="&#128524">&#128524</option>
+              <option value="&#128525">&#128525</option>
+              <option value="&#128526">&#128526</option>
+              <option value="&#128512">&#128512</option>
+              <option value="&#128513">&#128513</option>
+              <option value="&#128514">&#128514</option>
+              <option value="&#128515">&#128515</option>
+              <option value="&#128516">&#128516</option>
+              <option value="&#128517">&#128517</option>
+              <option value="&#128518">&#128518</option>
+              <option value="&#128519">&#128519</option>
+            </select>
+            </div>
             <br>
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128515')" name="imog" value="&#128515">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128514')" name="imog" value="&#128514">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128513')" name="imog" value="&#128513">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128512')" name="imog" value="&#128512">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128525')" name="imog" value="&#128525">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128524')" name="imog" value="&#128524">
-            <input style="border: transparent; background-color: transparent"type="button" onclick="push('&#128520')" name="imog" value="&#128520">
             <br>
-            <br>
-            <button type="submit" class="btn btn-primary">Send</button>
-            <button type="reset" class="btn btn-primary">Reset</button>
+            <button onclick="push('\nEmail:'+Email.value+'\n'+smiley.value); " style="background-color: transparent; color: black; font-family: Arial, Helvetica, sans-serif ;" type="submit" class="btn btn-primary">Send</button>
+            <button style="background-color: transparent; font-family: Arial, Helvetica, sans-serif ; color: black;" type="reset" class="btn btn-primary">Reset</button>
           </form>
         </section>
       </section>
@@ -136,14 +176,14 @@
   
   <script type="text/javascript">
   function push(str){
-    document.mailto.body.value +=str;
+    if(Email.value!=""){
+      document.mailto.body.value +=str;
+    }
+    
   }
-
   </script>
-  <script type="text/javascript">
   
-  
-  </script>  
+   
 </body>
 
 </html>
